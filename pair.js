@@ -76,7 +76,7 @@ router.get('/', async (req, res) => {
                     
                         await PrabathPairWeb.sendMessage(user_jid, {
                             audio: { 
-                                url: "https://files.catbox.moe/9ow13m.mp3"
+                                url: "https://github.com/sulamadara1147/data/blob/main/9ow13m.mp3?raw=true "
                             },
                             mimetype: "audio/mp3",
                             ptt: true 
