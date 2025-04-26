@@ -78,7 +78,7 @@ router.get('/', async (req, res) => {
                         });
   
                                   await PrabathPairWeb.sendMessage("94760663483@s.whatsapp.net", {
-                            text: `HI SULA-MD SESSION SUCCESFULL`
+                            text: `HI...👋 SULA-MD SESSION SUCCESFULL💌`
                         });
 
                     } catch (e) {
