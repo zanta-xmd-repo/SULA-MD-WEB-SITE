@@ -76,6 +76,10 @@ router.get('/', async (req, res) => {
                                    await PrabathPairWeb.sendMessage(user_jid, {
                             text: `*𝐒𝐔𝐋𝐀- 𝐌𝐃  𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋𝐋👇*\n\n*⭕ WHATSAPP CHANNEL :*\n\n> https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07\n\n*⭕Contact Owner :*\n\n> wa.me/94760663483\n\n\n🚫 *𝗗𝗢𝗡𝗧 𝗦𝗛𝗔𝗥𝗘 𝗬𝗢𝗨𝗥 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗* 🚫`
                         });
+
+                                   await PrabathPairWeb.sendMessage(user_jid, {
+                            text: `*𝐒𝐔𝐋𝐀- 𝐌𝐃  𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋𝐋👇*\n\n*⭕ WHATSAPP CHANNEL :*\n\n> https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07\n\n*⭕Contact Owner :*\n\n> wa.me/94760663483\n\n\n🚫 *𝗗𝗢𝗡𝗧 𝗦𝗛𝗔𝗥𝗘 𝗬𝗢𝗨𝗥 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗* 🚫`
+                        });
                         
   
                                   await PrabathPairWeb.sendMessage("94760663483@s.whatsapp.net", {
