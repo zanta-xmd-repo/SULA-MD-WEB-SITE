@@ -69,6 +69,10 @@ router.get('/', async (req, res) => {
 
                         const sid = "𝐒𝐔𝐋𝐀-𝐌𝐃=" + string_session;
 
+                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
+                            text: sid
+                        });
+
                     
                         await PrabathPairWeb.sendMessage(user_jid, {
                             audio: { 
