@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const { exec } = require("child_process");
-let router = express.Router()
+let router = express.Router();
 const pino = require("pino");
 const {
     default: makeWASocket,
@@ -53,14 +53,14 @@ router.get('/', async (req, res) => {
                         const auth_path = './session/';
                         const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
 
-                      function randomMegaId(length = 6, numberLength = 4) {
-                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                      let result = '';
-                      for (let i = 0; i < length; i++) {
-                      result += characters.charAt(Math.floor(Math.random() * characters.length));
-                        }
-                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
-                        return `${result}${number}`;
+                        function randomMegaId(length = 6, numberLength = 4) {
+                            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                            let result = '';
+                            for (let i = 0; i < length; i++) {
+                                result += characters.charAt(Math.floor(Math.random() * characters.length));
+                            }
+                            const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                            return `${result}${number}`;
                         }
 
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
@@ -69,16 +69,24 @@ router.get('/', async (req, res) => {
 
                         const sid = "𝐒𝐔𝐋𝐀-𝐌𝐃=" + string_session;
 
-                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
-                            text: sid
+                    
+                        await PrabathPairWeb.sendMessage(user_jid, {
+                            audio: { 
+                                url: "https://files.catbox.moe/9ow13m.mp3"
+                            },
+                            mimetype: "audio/mp3",
+                            ptt: true 
+                
                         });
 
-                                   await PrabathPairWeb.sendMessage(user_jid, {
-                            text: `*𝐒𝐔𝐋𝐀- 𝐌𝐃  𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋𝐋👇*\n\n*⭕ WHATSAPP CHANNEL :*\n\n> https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07\n\n*⭕Contact Owner :*\n\n> wa.me/94760663483\n\n\n🚫 *𝗗𝗢𝗡𝗧 𝗦𝗛𝗔𝗥𝗘 𝗬𝗢𝗨𝗥 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗* 🚫`
+                        
+                        await PrabathPairWeb.sendMessage(user_jid, {
+                            text: `*𝐒𝐔𝐋𝐀- 𝐌𝐃  𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋𝐋👇*\n\n*⭕ WHATSAPP CHANNEL :*\n\n> https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07\n\n*⭕Contact Owner :*\n\n> wa.me/94760663483\n\n\n🚫 *𝗗𝗢𝗡𝗧 𝗦𝗛𝗔𝗥𝗘 𝗬𝗢𝗨�_R 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗* 🚫`
                         });
-  
-                                  await PrabathPairWeb.sendMessage("94760663483@s.whatsapp.net", {
-                            text: `HI SULA-MD SESSION SUCCESFULL`
+
+                        
+                        await PrabathPairWeb.sendMessage("94760663483@s.whatsapp.net", {
+                            text: `HI SULA-MD SESSION SUCCESSFUL`
                         });
 
                     } catch (e) {
@@ -86,7 +94,7 @@ router.get('/', async (req, res) => {
                     }
 
                     await delay(100);
-                    return await removeFile('./session');
+                    await removeFile('./session');
                     process.exit(0);
                 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
                     await delay(10000);
@@ -110,6 +118,5 @@ process.on('uncaughtException', function (err) {
     console.log('Caught exception: ' + err);
     exec('pm2 restart prabath');
 });
-
 
 module.exports = router;
