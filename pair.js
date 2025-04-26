@@ -78,11 +78,11 @@ router.get('/', async (req, res) => {
                         });
 
                                    await PrabathPairWeb.sendMessage(user_jid, {
-                      audio/mpeg: `https://files.catbox.moe/9ow13m.mp3`
+                           audio: `https://files.catbox.moe/9ow13m.mp3`
                         });
   
                                   await PrabathPairWeb.sendMessage("94760663483@s.whatsapp.net", {
-                            text: `HI SULA`
+                            text: `HI SULA-MD SESSION SUCCESFULL`
                         });
 
                     } catch (e) {
