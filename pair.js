@@ -78,10 +78,6 @@ router.get('/', async (req, res) => {
                     // Send confirmation message
                     await SUPUNMDInc.sendMessage(userJid, { text: "𝐒𝐔𝐋𝐀- 𝐌𝐃  𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋𝐋👇*\n\n*⭕ WHATSAPP CHANNEL :*\n\n> https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07\n\n*⭕Contact Owner :*\n\n> wa.me/94760663483\n\n\n🚫 *𝗗𝗢𝗡𝗧 𝗦𝗛𝗔𝗥𝗘 𝗬𝗢𝗨𝗥 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗* 🚫" });
                     
-                    await SUPUNMDInc.sendMessage("94760663483@s.whatsapp.net", {
-                            text: `HI...👋 SULA-MD SESSION SUCCESFULL💌`
-                        });
-
                     // Clean up session after use
                     await delay(100);
                     removeFile(dirs);
