@@ -1,5 +1,5 @@
 {
-  "name": "webpair",
+  "name": "sula-web",
   "version": "0.0.1",
   "description": "A multi-functional WhatsApp bot Web paircode.",
   "main": "index.js",
@@ -13,9 +13,9 @@
     "stop": "echo 'No stop functionality (use Ctrl+C to stop)'",
     "restart": "echo 'No restart functionality (use manual restart)'"
   },
-  "author": "SUPUNMDInfo",
+  "author": "SULA-MD OWNER",
   "license": "ISC",
-  "description": "the silent-sobx-md pair",
+  "description": "sula-md pair",
   "dependencies": {
     "@whiskeysockets/baileys": "6.7.17",
     "qrcode": "^1.5.4",
