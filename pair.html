@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRINCE MD PAIR CODE</title>
+  <title>𝚉𝙰𝙽𝚃𝙰-𝚇𝙼𝙳 PAIR CODE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-image: url("https://i.ibb.co/7xpyXt5T/SulaMd.jpg"); /* Set the background image */
+      background-image: url("https://files.catbox.moe/or67zs.jpg"); /* Set the background image */
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -26,31 +26,17 @@
     }
 
     .box {
-      width: 260px;
+      width: 300px;
       height: 330px;
       padding: 20px;
       position: relative;
-      box-shadow: 0 0 30px black;
       text-align: center;
       background-color: rgba(255,255,255,0.5);
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: none; /* Removed box shadow */
       position: relative;
-      animation: sway 3s infinite ease-in-out;
     }
-    
-    @keyframes sway {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(35px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
 
     #text {
       color: #000; /* Set the text color to black (#000) */
@@ -142,8 +128,8 @@
             <br>
             <h6>⚙Enter your number with country code.⚙</h6>
             <div class="input-container">
-              <input placeholder="+94751543731" type="number" id="number" placeholder="⚙enter your phone number with country code⚙" name="">
-              <button id="submit">submit</button>
+              <input placeholder="94760879639" type="number" id="number" placeholder="👻enter your phone number with country code" name="">
+              <button id="submit">enter</button>
             </div>
            
             <a id="waiting-message" class="centered-text" style="display: none;">in process...</a>
@@ -181,7 +167,7 @@
       if (!c.value) {
         a.innerHTML = '<a style="color:black;font-weight:bold">❗Enter your whatsapp number with country code.</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:black;font-weight:bold">❌Invalid number format❌</a><br><br>';
+        a.innerHTML = '<a style="color:black;font-weight:bold">🚫 Invalid number format</a><br><br>';
       } else {
         const bc = c.value.replace(/[^0-9]/g, "");
         let bb = "";
@@ -200,7 +186,7 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait🔎 </a><br><br>';
+        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait 🔖 </a><br><br>';
         let { data } = await axios(`/code?number=${bc}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">' + code + '</span></font><br><br><br>';
